@@ -1,82 +1,87 @@
-✈️ AI-Based Aircraft Recognition System
-Aircraft Detection using YOLOv8 and Classification using ResNet-50
+# ✈️ AI-Based Aircraft Recognition System
 
->>>Google Drive Link Of Full Project:
-   https://drive.google.com/drive/folders/149i_iHdHYb1TVz3OH6jZMLhLpTInKpq3
+### Aircraft Detection using YOLOv8 and Classification using ResNet-50
 
-📌 Project Overview
-Outputs:
-1) Dashboard:
-![Homepage](https://raw.githubusercontent.com/arun0180/AI-Based-AircraftRecognition-System/main/dashboard.jpg
-)
-2) Detection and Classification Output Images
-![Homepage](https://raw.githubusercontent.com/arun0180/AI-Based-AircraftRecognition-System/main/ATR_72_29.jpg
-)
-![Homepage](https://raw.githubusercontent.com/arun0180/AI-Based-AircraftRecognition-System/main/MiG-29_80.jpg
-)
-![Homepage](https://raw.githubusercontent.com/arun0180/AI-Based-AircraftRecognition-System/main/Su-30_24.jpg
-)
-![Homepage](https://raw.githubusercontent.com/arun0180/AI-Based-AircraftRecognition-System/main/MQ-9_Reaper_Drone_7.jpg
-)
-![Homepage](https://raw.githubusercontent.com/arun0180/AI-Based-AircraftRecognition-System/main/Su-30_25.jpg
-)
+An intelligent aircraft recognition system that detects and classifies aircraft from images, videos, and real-time webcam feeds using Deep Learning and Computer Vision techniques.
 
+## 📌 Project Overview
 
-This project presents an AI-based Aircraft Recognition System capable of detecting aircraft in images, videos, and real-time camera feeds and identifying their type automatically.
+This project combines:
 
-The system uses:
+* **YOLOv8** for real-time aircraft detection
+* **ResNet-50** for aircraft classification
 
-YOLOv8 for aircraft detection
+The system first detects aircraft using bounding boxes and then classifies the detected aircraft type with confidence scores.
 
-ResNet-50 (CNN with Transfer Learning) for aircraft classification
+### 🎯 Main Objectives
 
-The detection model locates aircraft using bounding boxes, and the classification model identifies the aircraft type with confidence scores.
+* Detect aircraft accurately in different environments
+* Classify multiple aircraft categories
+* Support real-time recognition
+* Provide a user-friendly web interface
 
-This system can be applied in:
+# 🖥️ Output Screenshots
 
-Airport surveillance
+## 🔹 Dashboard
 
-Airspace monitoring
+![Dashboard](dashboard.jpg)
 
-Defense and security systems
+## 🔹 Detection & Classification Results
 
-UAV and drone tracking
+### ATR-72 Aircraft
 
-Aviation research and analytics
+![ATR-72](ATR_72_29.jpg)
 
-🚀 Features
+### MiG-29 Fighter Aircraft
 
-✔ Aircraft detection using YOLOv8
-✔ Aircraft classification using ResNet-50
-✔ Image input support
-✔ Video input support
-✔ Real-time webcam detection
-✔ Web-based interface using Flask
-✔ Modular architecture (detection + classification pipeline)
+![MiG-29](MiG-29_80.jpg)
 
-🧠 Models Used
-1️⃣ YOLOv8 (Detection Model)
+### MQ-9 Reaper Drone
 
-Detects aircraft in an image
+![MQ-9](MQ-9_Reaper_Drone_7.jpg)
 
-Outputs bounding box coordinates
+### Su-30 Aircraft
 
-Provides confidence score
+![Su-30](Su-30_24.jpg)
 
-Fast and suitable for real-time applications
+# 🚀 Features
 
-2️⃣ ResNet-50 (Classification Model)
+* ✅ Aircraft Detection using YOLOv8
+* ✅ Aircraft Classification using ResNet-50
+* ✅ Real-Time Webcam Detection
+* ✅ Image Detection Support
+* ✅ Video Detection Support
+* ✅ Flask-Based Web Interface
+* ✅ Modular Detection + Classification Pipeline
 
-Deep Convolutional Neural Network
+# 🧠 Models Used
 
-Uses transfer learning
+## 1️⃣ YOLOv8 – Detection Model
 
-Classifies cropped aircraft images
+YOLOv8 is used for detecting aircraft in images and video streams.
 
-Handles fine-grained aircraft differences
+### Functions:
 
-📂 Project Structure
-AI-Aircraft-Recognition-System/
+* Detects aircraft location
+* Draws bounding boxes
+* Generates confidence scores
+* Supports real-time performance
+
+## 2️⃣ ResNet-50 – Classification Model
+
+ResNet-50 is used to classify detected aircraft types.
+
+### Functions:
+
+* Transfer learning based CNN model
+* High classification accuracy
+* Handles fine-grained aircraft differences
+* Efficient feature extraction
+
+# 📂 Project Structure
+
+```bash
+AI-Based-AircraftRecognition-System/
 │
 ├── app.py
 ├── scripts/
@@ -85,167 +90,166 @@ AI-Aircraft-Recognition-System/
 │   ├── recognize_image.py
 │   └── detect_video.py
 │
-├── models/               # Model architecture files
-├── test_images/          # Sample test images
-├── data.yaml             # YOLO dataset configuration
+├── models/
+├── test_images/
 ├── requirements.txt
 ├── README.md
 └── .gitignore
-📊 Dataset Information
+```
 
-Aircraft images were collected from:
+# 📊 Dataset Information
 
-FGVC-Aircraft Dataset
+Datasets used in this project:
 
-FAIR1M Dataset
+* FGVC-Aircraft Dataset
+* FAIR1M Dataset
+* UCAS-AOD Dataset
+* Public aviation image sources
 
-UCAS-AOD Dataset
+### Dataset Includes:
 
-Public aviation image sources
+* Commercial Aircraft
+* Military Aircraft
+* UAV & Drone Images
+* Different lighting and angle conditions
 
-Dataset includes:
+### Annotation Tool:
 
-Commercial aircraft
+* LabelImg (YOLO Format)
 
-Military aircraft
+# ⚙️ Installation
 
-UAV types
+## 🔹 Clone Repository
 
-Different angles and lighting conditions
+```bash
+git clone https://github.com/yourusername/AI-Based-AircraftRecognition-System.git
+cd AI-Based-AircraftRecognition-System
+```
 
-The dataset was split into:
+## 🔹 Create Virtual Environment
 
-Training set
-
-Validation set
-
-Testing set
-
-Aircraft were annotated using LabelImg in YOLO format.
-
-⚙️ Installation Guide
-🔹 Step 1: Clone Repository
-git clone https://github.com/yourusername/AI-Aircraft-Recognition-System.git
-cd AI-Aircraft-Recognition-System
-🔹 Step 2: Create Virtual Environment (Optional but Recommended)
+```bash
 python -m venv venv
-venv\Scripts\activate   # Windows
-🔹 Step 3: Install Requirements
+```
+
+### Activate Environment (Windows)
+
+```bash
+venv\Scripts\activate
+```
+
+## 🔹 Install Dependencies
+
+```bash
 pip install -r requirements.txt
-▶️ How to Run the Project
-🔹 Run Web Application
+```
+
+# ▶️ Running the Project
+
+## 🔹 Run Flask Web Application
+
+```bash
 python app.py
+```
 
-Open browser and go to:
+Open browser:
 
+```bash
 http://127.0.0.1:5000
-🔹 Train YOLOv8 Detector
+```
+
+
+## 🔹 Train YOLOv8 Detector
+
+```bash
 python scripts/train_detector.py
-🔹 Train ResNet Classifier
+```
+
+## 🔹 Train ResNet-50 Classifier
+
+```bash
 python scripts/train_classifier.py
-🔹 Run Image Detection
+```
+
+
+## 🔹 Run Image Detection
+
+```bash
 python scripts/recognize_image.py
-🔹 Run Video Detection
+```
+
+
+## 🔹 Run Video Detection
+
+```bash
 python scripts/detect_video.py
-📈 Performance Metrics
+```
 
-The system was evaluated using:
+# 📈 Performance Metrics
 
-Accuracy
+The system performance was evaluated using:
 
-Precision
+* Accuracy
+* Precision
+* Recall
+* F1-Score
+* mAP (Mean Average Precision)
 
-Recall
+### Results:
 
-F1-score
+* Accurate aircraft detection
+* Reliable classification performance
+* Real-time processing capability
+* Good performance in complex backgrounds
 
-mAP (mean Average Precision)
+# 💻 Technologies Used
 
-Confusion Matrix
+* Python
+* PyTorch
+* YOLOv8
+* OpenCV
+* NumPy
+* Flask
+* Matplotlib
 
-Results show:
+# 🔥 Advantages
 
-Accurate detection in complex backgrounds
+* End-to-End Aircraft Recognition
+* Real-Time Processing
+* Scalable Architecture
+* Modular Design
+* Easy Deployment
 
-Reliable classification across multiple aircraft types
+# ⚠️ Limitations
 
-Real-time performance with GPU support
+* Small aircraft may reduce accuracy
+* Similar aircraft types can create confusion
+* Real-time performance depends on GPU hardware
 
-💻 Technologies Used
+# 🔮 Future Enhancements
 
-Python
+* DeepSORT Aircraft Tracking
+* Satellite Image Support
+* Edge Device Deployment
+* Explainable AI using Grad-CAM
+* Expanded Aircraft Dataset
 
-PyTorch
+# 📌 Applications
 
-Ultralytics YOLOv8
+* Airport Surveillance
+* Airspace Monitoring
+* Defense Systems
+* UAV Monitoring
+* Aviation Analytics
 
-OpenCV
+# 👨‍💻 Developed By
 
-NumPy
-
-Matplotlib
-
-Flask
-
-🔥 Key Advantages
-
-End-to-end aircraft recognition
-
-Real-time capability
-
-Scalable architecture
-
-Modular detection + classification design
-
-Easy deployment
-
-⚠️ Limitations
-
-Performance may reduce for very small aircraft
-
-Visually similar aircraft may cause minor confusion
-
-Real-time performance depends on hardware
-
-🔮 Future Enhancements
-
-Add aircraft tracking (DeepSORT)
-
-Expand dataset with more aircraft types
-
-Deploy on edge devices (Jetson Nano)
-
-Integrate satellite image support
-
-Add Explainable AI (Grad-CAM visualization)
-
-📌 Applications
-
-Airport security monitoring
-
-Airspace surveillance
-
-Defense monitoring systems
-
-UAV monitoring
-
-Aviation analytics
-
-📜 License
-
-This project is developed for academic and research purposes.
-
-👨‍💻 Author
-
-Developed as part of a Mini Project
+**Abhishek Ireddy**
 Department of Computer Science and Engineering
 BMS Institute of Technology & Management
 
-⭐ If You Found This Useful
+---
 
-Give this repository a ⭐ on GitHub.
+# ⭐ Support
 
-
-
-
-
+If you found this project useful, give it a ⭐ on GitHub!
